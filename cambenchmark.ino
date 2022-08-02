@@ -117,5 +117,5 @@ void loop()
   tft.print("Trigger: ");
   tft.print(triggerDuration);
   tft.print("us");
-
+  
 }

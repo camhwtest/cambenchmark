@@ -1,3 +1,3 @@
 
-#define TIP_RED 13
-#define RING_WHITE 12
+#define LT_FOCUS 13
+#define LT_SHUTTER 12

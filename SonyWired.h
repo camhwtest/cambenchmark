@@ -3,30 +3,27 @@
 unsigned long markerOffsetMs = 16;
 unsigned long markerDurationMs = 2;
 
-// SONY
-#define SHUTTER TIP_RED
-#define FOCUS RING_WHITE
 
 void initCamera() {
-    pinMode(FOCUS, OUTPUT);
-    pinMode(SHUTTER, OUTPUT);
-    digitalWrite(FOCUS, 1);
-    digitalWrite(SHUTTER, 1);
+    pinMode(LT_FOCUS, OUTPUT);
+    pinMode(LT_SHUTTER, OUTPUT);
+    digitalWrite(LT_FOCUS, 0);
+    digitalWrite(LT_SHUTTER, 0);
 }
 
 
 void focusBegin() {
-  digitalWrite(FOCUS, 0);
+  digitalWrite(LT_FOCUS, 1);
 }
 
 void focusEnd() {
-  digitalWrite(FOCUS, 1);
+  digitalWrite(LT_FOCUS, 0);
 }
 
 void shutterBegin() {
-  digitalWrite(SHUTTER, 0);
+  digitalWrite(LT_SHUTTER, 1);
 }
 
 void shutterEnd() {
-  digitalWrite(SHUTTER, 1);
+  digitalWrite(LT_SHUTTER, 0);
 }
